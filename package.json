@@ -1,6 +1,6 @@
 {
   "name": "redux-ipc",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Log your Redux state and actions to a node backend via WebSockets.",
   "main": "index.js",
   "scripts": {
