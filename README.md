@@ -45,6 +45,12 @@ wss.on('message', message => {
 });
 ```
 
+## Examples
+
+Run `npm install` and `npm start` for each directory in `/examples`.
+
+*Note: Examples are based on the official Redux examples with slight modifications to showcase the IPC functionality.*
+
 ## License
 
 MIT © Vu Tran

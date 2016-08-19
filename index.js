@@ -11,7 +11,7 @@ module.exports = ({ getState }) => {
     const state = getState();
     const data = { action, state };
     // sends the data to the server
-    if (socket instanceof WebSocket) {
+    if (typeof WebSocket !== 'undefined' && socket instanceof WebSocket) {
       socket.onopen = () => {
         socket.send(JSON.stringify(data));
       };

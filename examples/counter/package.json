@@ -1,5 +1,5 @@
 {
-  "name": "redux-counter-example",
+  "name": "redux-ipc-counter-example",
   "version": "0.0.0",
   "description": "Redux counter example",
   "scripts": {

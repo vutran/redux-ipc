@@ -1,5 +1,5 @@
 const { createStore, applyMiddleware } = require('redux');
-const reduxIpcMiddleware = require('../');
+const reduxIpcMiddleware = require('../../');
 const Server = reduxIpcMiddleware.Server;
 
 const PORT = process.env.REDUX_IPC_PORT || 8080;

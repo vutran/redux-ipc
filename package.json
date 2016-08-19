@@ -3,9 +3,6 @@
   "version": "0.2.1",
   "description": "Log your Redux state and actions to a node backend via WebSockets.",
   "main": "index.js",
-  "scripts": {
-    "demo": "node example"
-  },
   "files": [
     "client.js",
     "index.js",
