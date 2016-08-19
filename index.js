@@ -4,16 +4,22 @@ const Server = require('./server');
 const PORT = process.env.REDUX_IPC_PORT || 8080;
 const PROTOCOL = process.env.REDUX_IPC_PROTOCOL || 'redux-ipc';
 
-const socket = new Client(`ws://localhost:${PORT}`, PROTOCOL);
 
 module.exports = ({ getState }) => {
   return next => action => {
+    const socket = new Client(`ws://localhost:${PORT}`, PROTOCOL);
     const state = getState();
     const data = { action, state };
     // sends the data to the server
-    socket.on('open', () => {
-      socket.send(JSON.stringify(data));
-    });
+    if (socket instanceof WebSocket) {
+      socket.onopen = () => {
+        socket.send(JSON.stringify(data));
+      };
+    } else {
+      socket.on('open', () => {
+        socket.send(JSON.stringify(data));
+      });
+    }
     return next(action);
   };
 };
