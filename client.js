@@ -1,7 +1,14 @@
-const WebSocket = require('ws');
+// if within node, use the ws package
+// otherwise, use default web sockets
 
-module.exports = class Client extends WebSocket {
-  constructor(url, socketName) {
-    super(url, socketName);
+if (global.process) {
+  const WebSocket = require('ws');
+
+  module.exports = class Client extends WebSocket {
+    constructor(url, socketName) {
+      super(url, socketName);
+    }
   }
+} else {
+  return WebSocket;
 }
