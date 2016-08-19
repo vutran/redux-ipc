@@ -1,7 +1,7 @@
 {
   "name": "redux-ipc",
-  "version": "0.0.0",
-  "description": "",
+  "version": "0.1.0",
+  "description": "Log your Redux state and actions to a node backend via WebSockets.",
   "main": "index.js",
   "scripts": {
     "demo": "node example"
@@ -21,5 +21,23 @@
   },
   "devDependencies": {
     "redux": "^3.5.2"
-  }
+  },
+  "directories": {
+    "example": "example"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vutran/redux-ipc.git"
+  },
+  "keywords": [
+    "redux",
+    "websocket",
+    "socket",
+    "ipc",
+    "rpc"
+  ],
+  "bugs": {
+    "url": "https://github.com/vutran/redux-ipc/issues"
+  },
+  "homepage": "https://github.com/vutran/redux-ipc#readme"
 }
