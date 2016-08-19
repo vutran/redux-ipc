@@ -10,5 +10,5 @@ if (global.process) {
     }
   }
 } else {
-  return WebSocket;
+  module.exports = WebSocket;
 }
