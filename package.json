@@ -1,0 +1,18 @@
+{
+  "name": "redux-ipc",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "demo": "node example"
+  },
+  "author": "Vu Tran <vu@vu-tran.com>",
+  "license": "MIT",
+  "dependencies": {
+    "redux": "^3.5.2",
+    "ws": "^1.1.1"
+  },
+  "devDependencies": {
+    "redux": "^3.5.2"
+  }
+}
