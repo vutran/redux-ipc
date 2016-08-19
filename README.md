@@ -37,7 +37,7 @@ const PORT = process.env.REDUX_IPC_PORT || 8080;
 const PROTOCOL = process.env.REDUX_IPC_PROTOCOL || 'redux-ipc';
 
 // create a new redux ipc server
-const wss = new Server(PORT, PROTOCOL);
+const wss = new Server({ port: PORT, socketName: PROTOCOL });
 
 // listen to messages
 wss.on('message', message => {
