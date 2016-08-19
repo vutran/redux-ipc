@@ -6,6 +6,13 @@
   "scripts": {
     "demo": "node example"
   },
+  "files": [
+    "client.js",
+    "index.js",
+    "LICENSE",
+    "README.md",
+    "server.js"
+  ],
   "author": "Vu Tran <vu@vu-tran.com>",
   "license": "MIT",
   "dependencies": {
