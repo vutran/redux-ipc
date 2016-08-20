@@ -1,6 +1,5 @@
 // if within node, use the ws package
 // otherwise, use default web sockets
-
 if (global.process) {
   const WebSocket = require('ws');
 

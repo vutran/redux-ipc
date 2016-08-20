@@ -4,11 +4,11 @@ const Server = require('./server');
 const PORT = process.env.REDUX_IPC_PORT || 8080;
 const PROTOCOL = process.env.REDUX_IPC_PROTOCOL || 'redux-ipc';
 
-
 module.exports = ({ getState }) => {
   return next => action => {
-    const socket = new Client(`ws://localhost:${PORT}`, PROTOCOL);
+    const nextState = next(action);
     const state = getState();
+    const socket = new Client(`ws://localhost:${PORT}`, PROTOCOL);
     const data = { action, state };
     // sends the data to the server
     if (typeof WebSocket !== 'undefined' && socket instanceof WebSocket) {
@@ -20,7 +20,7 @@ module.exports = ({ getState }) => {
         socket.send(JSON.stringify(data));
       });
     }
-    return next(action);
+    return nextState;
   };
 };
 
