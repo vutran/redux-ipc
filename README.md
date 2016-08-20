@@ -8,6 +8,8 @@
 $ npm install --save redux-ipc
 ```
 
+![Demo](demo.gif)
+
 ## Usage
 
 Apply the middleware when creating your Redux store.
