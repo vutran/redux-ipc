@@ -1,4 +1,6 @@
 # redux-ipc
+[![MIT licensed](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+
 
 > Log your Redux state and actions to a node backend via WebSockets.
 
